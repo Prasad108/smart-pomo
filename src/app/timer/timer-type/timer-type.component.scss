@@ -1,0 +1,18 @@
+/* timer-type.component.css */
+
+.timer-type {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .selected {
+    background-color: #6f9a2b;
+    color: #fff;
+  }

@@ -10,9 +10,12 @@ const routes: Routes = [
     path: 'message/:id',
     loadChildren: () => import('./view-message/view-message.module').then( m => m.ViewMessagePageModule)
   },
+  { path: 'tasks', loadChildren: () => import('./task/task.module').then((m) => m.TaskModule) },
+  { path: 'timer', loadChildren: () => import('./timer/timer.module').then((m) => m.TimerModule) },
+  { path: 'history', loadChildren: () => import('./history/history.module').then((m) => m.HistoryModule) },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'timer',
     pathMatch: 'full'
   },
 ];

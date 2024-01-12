@@ -1,0 +1,28 @@
+
+<div class="center-container">
+
+  <app-timer-type (timerTypeSelected)="selectTimerType($event)"></app-timer-type>
+  <div class="circle-container">
+    <circle-progress
+      [percent]="timerPercentage"
+      [radius]="180"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="false"
+      [animationDuration]="100"
+      [title]="timerCountDown"
+      [titleFontSize]="'70'"
+      [units]="''">
+    </circle-progress>
+    </div>
+
+    <app-timer-controls
+      (startClicked)="startTimer()"
+      (stopClicked)="stopTimer()"
+      (resetClicked)="resetTimer()">
+    </app-timer-controls>
+
+
+</div>

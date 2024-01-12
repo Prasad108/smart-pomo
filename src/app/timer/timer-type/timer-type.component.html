@@ -1,0 +1,5 @@
+<div class="timer-type">
+  <button [class.selected]="selectedTimerType === 'pomodoro'" (click)="selectPomodoro()">Pomodoro</button>
+  <button [class.selected]="selectedTimerType === 'shortbreak'" (click)="selectShortBreak()">Short Break</button>
+  <button [class.selected]="selectedTimerType === 'longbreak'" (click)="selectLongBreak()">Long Break</button>
+</div>
