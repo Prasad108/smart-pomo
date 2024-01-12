@@ -1,0 +1,7 @@
+{
+  "name": "Smart Pomo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
