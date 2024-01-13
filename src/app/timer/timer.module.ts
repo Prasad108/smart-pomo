@@ -5,6 +5,7 @@ import { TimerControlsComponent } from './timer-controls/timer-controls.componen
 import { TimerComponent } from './timer/timer.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { TimerTypeComponent } from './timer-type/timer-type.component';
+import { IonicModule } from '@ionic/angular';
 
 
 
@@ -13,7 +14,8 @@ import { TimerTypeComponent } from './timer-type/timer-type.component';
   imports: [
     CommonModule,
     TimerRoutingModule,
-    NgCircleProgressModule.forRoot()
+    NgCircleProgressModule.forRoot(),
+    IonicModule
   ]
 })
 export class TimerModule { }

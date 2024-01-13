@@ -1,0 +1,9 @@
+ion-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    --inner-padding-start: 20px; /* Adjust the inner padding as needed */
+  
+    ion-checkbox {
+      --padding-end: 10px; /* Adjust the padding as needed */
+    }
+  }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HistoryRoutingModule } from './history-routing.module';
 import { HistoryListComponent } from './history-list/history-list.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { IonicModule } from '@ionic/angular';
 
 
 
@@ -10,7 +11,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
   declarations: [HistoryListComponent,StatisticsComponent],
   imports: [
     CommonModule,
-    HistoryRoutingModule
+    HistoryRoutingModule,
+    IonicModule
   ]
 })
 export class HistoryModule { }
