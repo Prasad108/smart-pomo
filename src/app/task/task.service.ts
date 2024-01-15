@@ -5,6 +5,10 @@ import { Task } from '../models/task.model';
   providedIn: 'root'
 })
 export class TaskService {
+  addTask(newTask: Task) {
+    console.log('new task added :'+newTask)
+    this.tasks.push(newTask);
+  }
   private tasks: Task[] = [];
 
   constructor() {
@@ -17,66 +21,12 @@ export class TaskService {
   }
 
   private initSampleTasks() {
-    this.tasks.push(
-      new Task(
-        'Task 1',
-        'Description for Task 1',
-        'high',
-        new Date('2022-08-15'),
-        'in progress',
-        ['work', 'urgent'],
-        60,
-        ['Checklist item 1', 'Checklist item 2'],
-        ['/attachments/file1.pdf', 'https://example.com/image.jpg'],
-        [new Date('2022-08-10T08:00:00')],
-        ['John Doe', 'Jane Doe'],
-        {
-          frequency: 'daily',
-          interval: 1,
-        }
-      )
-    );
-
-    this.tasks.push(
-      new Task(
-        'Task 2',
-        'Description for Task 2',
-        'medium',
-        new Date('2022-08-20'),
-        'not started',
-        ['personal'],
-        30,
-        ['Checklist item 1', 'Checklist item 2', 'Checklist item 3'],
-        [],
-        [new Date('2022-08-18T10:00:00')],
-        ['Alice Smith'],
-        {
-          frequency: 'weekly',
-          interval: 2,
-        }
-      )
-    );
-
-    this.tasks.push(
-      new Task(
-        'Task 3',
-        'Description for Task 3',
-        'low',
-        new Date('2022-08-25'),
-        'completed',
-        ['health', 'exercise'],
-        45,
-        [],
-        ['/attachments/photo.jpg'],
-        [],
-        [],
-        {
-          frequency: 'monthly',
-          interval: 1,
-        }
-      )
-    );
-
-    // Add more tasks as needed
+    this.tasks = [
+        new Task('Complete Project', 1, 'high', new Date(2024, 0, 15), 'none'),
+        new Task('Read Book', 2, 'medium', new Date(2024, 0, 20), 'daily'),
+        new Task('Exercise', 1, 'low', new Date(2024, 0, 22), 'weekly'),
+        new Task('Learn Angular', 2, 'medium', new Date(2024, 0, 25), 'none'),
+        new Task('Write Blog Post', 2, 'high', new Date(2024, 0, 30), 'monthly'),
+      ];
   }
 }

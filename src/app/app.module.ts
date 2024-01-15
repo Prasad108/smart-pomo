@@ -9,16 +9,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { TaskModule } from './task/task.module';
 import { TimerModule } from './timer/timer.module';
 import { HistoryModule } from './history/history.module';
-import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
      IonicModule.forRoot(),
+     AppRoutingModule,
      TaskModule,
      TimerModule,
      HistoryModule,
-     AppRoutingModule],
+     ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

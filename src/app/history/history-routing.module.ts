@@ -5,8 +5,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'history', component: HistoryListComponent },
-  { path: 'history/statistics', component: StatisticsComponent },
+  { path: '', component: HistoryListComponent },
+  { path: 'statistics', component: StatisticsComponent },
 ];
 
 

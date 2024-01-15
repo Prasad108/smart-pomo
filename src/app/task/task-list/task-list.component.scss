@@ -1,9 +1,32 @@
-ion-item {
-    border-radius: 10px;
-    margin-bottom: 10px;
-    --inner-padding-start: 20px; /* Adjust the inner padding as needed */
+// ion-item {
+//     border-radius: 10px;
+//     margin-bottom: 10px;
+//     --inner-padding-start: 20px; /* Adjust the inner padding as needed */
   
-    ion-checkbox {
-      --padding-end: 10px; /* Adjust the padding as needed */
-    }
-  }
+//     ion-checkbox {
+//       --padding-end: 10px; /* Adjust the padding as needed */
+//     }
+//   }
+
+//   ion-item.rounded-item {
+//     border-radius: 10px;
+//     margin-bottom: 10px;
+//     --inner-padding-start: 20px; /* Adjust the inner padding as needed */
+//   }
+  
+//   ion-item::part(native) {
+//     // background: #19422d;
+//     // color: #fff;
+  
+//     // border-color: #fff;
+//     border-style: double;
+//     border-width: 2px;
+  
+//     border-radius: 20px;
+//   }
+  
+//   ion-item::part(detail-icon) {
+//     color: white;
+//     opacity: 1;
+//     font-size: 20px;
+//   }

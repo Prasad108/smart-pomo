@@ -1,0 +1,51 @@
+<!-- src/app/components/create-task/create-task.component.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create New Task</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Back" [routerLink]="['/tasks']" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="taskForm" (ngSubmit)="createTask()">
+    <ion-list lines="full">
+      <ion-item>
+        <!-- <ion-label position="floating">Task Name</ion-label> -->
+        <ion-input formControlName="name" label="Task Name" placeholder="Enter text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Pomodoro Count</ion-label>
+        <ion-input formControlName="pomodoroCount" type="number" min="1"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Priority</ion-label>
+        <ion-select formControlName="priority" placeholder="Select Priority" required>
+          <ion-select-option value="low">Low</ion-select-option>
+          <ion-select-option value="medium">Medium</ion-select-option>
+          <ion-select-option value="high">High</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Due Date</ion-label>
+        <ion-datetime formControlName="dueDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Recurring</ion-label>
+        <ion-select formControlName="recurring" placeholder="Select Recurring">
+          <ion-select-option value="none">None</ion-select-option>
+          <ion-select-option value="daily">Daily</ion-select-option>
+          <ion-select-option value="weekly">Weekly</ion-select-option>
+          <ion-select-option value="monthly">Monthly</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="full" type="submit">Create Task</ion-button>
+    </ion-list>
+  </form>
+</ion-content>

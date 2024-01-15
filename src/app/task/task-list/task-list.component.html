@@ -1,14 +1,24 @@
-<ion-header>
+<ion-header >
   <ion-toolbar>
     <ion-title>Tasks</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+
+
+  <ion-button expand="full" color="secondary" [routerLink]="['/tasks/create']">Create Task</ion-button>
   <ion-list>
-    <ion-item *ngFor="let task of tasks">
+    <ion-item lines="none" color="medium">
+      <ion-label>Name</ion-label>
+      <ion-label>Pomodoros</ion-label>
+      <ion-label>Recurring</ion-label>
+      <!-- Add header for other columns if needed -->
+    </ion-item>
+    <ion-item *ngFor="let task of tasks" lines="inset" [routerLink]="['/tasks', 'detail', '1']">
       <ion-label>{{ task.name }}</ion-label>
-      <ion-label>{{ task.status }}</ion-label>
+      <ion-label>{{ task.pomodoroCount | clockIcon }}</ion-label>
+      <ion-label>{{ task.recurring }}</ion-label>
       <!-- <ion-checkbox [(ngModel)]="task.status" disabled></ion-checkbox> -->
     </ion-item>
   </ion-list>
